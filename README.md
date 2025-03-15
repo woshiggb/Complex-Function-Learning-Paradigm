@@ -1,34 +1,61 @@
-# Complex-Function-Learning-Paradigm
+Here’s a refined version of your Complex-Function-Learning-Paradigm documentation with improved formatting and clarity:
+
+# Complex Function Learning Paradigm
+
 For multi-dimensional learning objectives, a new genetic learning method is provided.
 
-### How to Use.
-For training with this model, use the following methods:
-pip install -r requirements.txt
-Test Method:
-(Use cmd)
-'python file path (.) /CODE/USE1.py'
-(The mouse draws a line in a row, so that the model dataset learning method is simulated, and the training is carried out in a single round)
-'python (.) /CODE/USE2.py'
-(Input/Output, Guess Generalization)
-'python (.) /CODE/CODE_LIKE.py'
-Compared with the MLP small layer, only the coordinates are used to display the effect at various levels of the model.
-(0 - 5) The size of the learning model of the dataset
+### How to Use
+
+To train with this model, follow these steps:
+
+1. **Install Requirements**:
+   Run the following command to install necessary dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Test Methods**:
+   - To simulate model dataset learning by drawing a line with the mouse in a row and training in a single round, use:
+     ```bash
+     python /path/to/CODE/USE1.py
+     ```
+   - For input/output and guess generalization, run:
+     ```bash
+     python /path/to/CODE/USE2.py
+     ```
+   - To compare the effect at various levels of the model with a small MLP layer using only coordinates, execute:
+     ```bash
+     python /path/to/CODE/CODE_LIKE.py
+     ```
+   - Note: The model dataset's learning size is defined within a range of 0 to 5.
 
 ### Use in Code
-'''
-import (same path)CODE/code__
-model (number, numeric value)
-Used to generate a connection for a single dimension
-(model.forward(x), model.backward(x,y), train x,y)
 
-modeldwo (the number of receptions of the model (the best fit), [1st layer, 2nd layer, 3rd layer...... -1 layer, last], each layer is a size to indicate how many neurons there are)
+Here is a sample of how to implement the model in code:
 
-models (each)
+```python
+import CODE.code__
 
-Train2([number of models (more is better), [number of neurons per layer of the model, number of receptions of the model], of the model], any number)
+# Initialize model
+model = code__.Model(number, numeric_value)  # Generates a connection for a single dimension
 
-Train2.forward(x) (vector input)
-Train2.backward(y) (vector expectation)
-'''
-The same goes for models
-The same is true for models, but numbers
+# Forward and backward training
+model.forward(x)  # Pass input vector x through the model
+model.backward(x, y)  # Adjust model based on prediction vs expectation
+
+# Define model architecture
+modeldwo = code__.ModelTypes(num_receptions, [size_layer1, size_layer2, ..., size_last_layer])
+
+# Train multiple models
+models = code__.Train2(num_models, [neurons_per_layer, num_receptions_per_model])
+
+# Train and perform forward/backward propagation
+models.forward(x)  # Vector input
+models.backward(y)  # Vector expectation
+```
+
+### Additional Notes
+
+- The same methodology applies for both `model` and `models`.
+- Adjust the `number` and `numeric_value` to fit your specific requirements.
+- Custom layers and neurons can be defined based on your learning objectives.
